@@ -382,7 +382,7 @@
         <input
           type="password"
           id="gemini-api-key-input"
-          placeholder="วาง AIza... แล้วกดบันทึก"
+          placeholder="วาง API Key แล้วกดบันทึก"
           oninput="saveGeminiApiKey(this.value)"
           class="bg-transparent border-none text-[11px] font-mono text-[#f4f4f5] focus:outline-none w-full min-w-0"
           aria-label="Gemini API Key"
@@ -1545,7 +1545,7 @@
             canvas.width = w;
             canvas.height = h;
             canvas.getContext('2d').drawImage(img, 0, 0, w, h);
-            const jpegUrl = canvas.toDataURL('image/jpeg', 0.76);
+            const jpegUrl = canvas.toDataURL('image/jpeg', 0.72);
             const parts = jpegUrl.split(',');
             resolve({ previewUrl: jpegUrl, mimeType: 'image/jpeg', base64: parts[1] || '' });
           };
@@ -1738,20 +1738,50 @@
 
       document.getElementById('res-burn-grid').innerHTML = `
         <div class="rounded-lg bg-[#18140c] border border-[#f59e0b]/35 p-2.5">
-          <div class="text-[10px] font-bold text-[#fbbf24]">1. เดิน</div>
-          <div class="text-sm font-black text-[#f4f4f5] mt-1">${steps.toLocaleString()} ก้าว</div>
+          <div class="flex items-center justify-between gap-1.5">
+            <span class="text-[10px] font-bold text-[#fbbf24]">1. เดิน</span>
+            <svg class="w-3.5 h-3.5 text-[#fbbf24] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="13" cy="4.5" r="2"/>
+              <path d="M10.5 21l1.5-5.5 2.5 2.5v3"/>
+              <path d="M8.5 14l2.5-4.5 3.5 1.5 2.5 2"/>
+            </svg>
+          </div>
+          <div class="text-sm font-black text-[#f4f4f5] mt-1.5">${steps.toLocaleString()} ก้าว</div>
         </div>
+
         <div class="rounded-lg bg-[#18140c] border border-[#f59e0b]/35 p-2.5">
-          <div class="text-[10px] font-bold text-[#fbbf24]">2. วิ่ง</div>
-          <div class="text-sm font-black text-[#f4f4f5] mt-1">${runMin} นาที</div>
+          <div class="flex items-center justify-between gap-1.5">
+            <span class="text-[10px] font-bold text-[#fbbf24]">2. วิ่ง</span>
+            <svg class="w-3.5 h-3.5 text-[#fbbf24] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="15" cy="4.5" r="2"/>
+              <path d="M7 21l3.5-5 3 2 2.5 3"/>
+              <path d="M6.5 12l3.5-3.5 4 1.5 3.5-1.5"/>
+            </svg>
+          </div>
+          <div class="text-sm font-black text-[#f4f4f5] mt-1.5">${runMin} นาที</div>
         </div>
+
         <div class="rounded-lg bg-[#18140c] border border-[#f59e0b]/35 p-2.5">
-          <div class="text-[10px] font-bold text-[#fbbf24]">3. ปั่นจักรยาน</div>
-          <div class="text-sm font-black text-[#f4f4f5] mt-1">${bikeHours} ชม. (${bikeMin} นาที)</div>
+          <div class="flex items-center justify-between gap-1.5">
+            <span class="text-[10px] font-bold text-[#fbbf24]">3. ปั่นจักรยาน</span>
+            <svg class="w-3.5 h-3.5 text-[#fbbf24] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="6" cy="17" r="3.5"/>
+              <circle cx="18" cy="17" r="3.5"/>
+              <path d="M6 17l4.5-7h4.5l3 7"/>
+              <path d="M10.5 10l2.5 7M14 7h2.5"/>
+            </svg>
+          </div>
+          <div class="text-sm font-black text-[#f4f4f5] mt-1.5">${bikeHours} ชม. (${bikeMin} นาที)</div>
         </div>
+
         <div class="rounded-lg bg-[#18140c] border border-[#f59e0b]/35 p-2.5">
-          <div class="text-[10px] font-bold text-[#fbbf24]">4. เล่นเวท</div>
-          <div class="text-sm font-black text-[#f4f4f5] mt-1">${weightEx} ท่า</div>
+          <div class="flex items-center justify-between gap-1.5">
+            <span class="text-[10px] font-bold text-[#fbbf24]">4. เล่นเวท</span>
+            <svg class="w-3.5 h-3.5 text-[#fbbf24] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6.5 7v10M17.5 7v10M4 9v6M20 9v6M6.5 12h11"/>
+            </svg>
+          </div>
+          <div class="text-sm font-black text-[#f4f4f5] mt-1.5">${weightEx} ท่า</div>
         </div>
       `;
     }
@@ -1785,7 +1815,7 @@
 
       try {
         const rawUrl = await readFileAsDataUrl(file);
-        const compressed = await compressDataUrl(rawUrl, 768);
+        const compressed = await compressDataUrl(rawUrl, 640);
         const img = document.getElementById('food-photo-preview');
         const wrap = document.getElementById('food-photo-preview-wrap');
         if (img && wrap && compressed.previewUrl) {
@@ -1868,7 +1898,7 @@
       setStatusBanner('sleep-scan-status', 'กำลังอ่านภาพการนอนด้วย Gemini...', true);
       try {
         const rawUrl = await readFileAsDataUrl(file);
-        const compressed = await compressDataUrl(rawUrl, 768);
+        const compressed = await compressDataUrl(rawUrl, 640);
         document.getElementById('sleep-photo-preview').src = compressed.previewUrl;
         document.getElementById('sleep-photo-preview-wrap').classList.remove('hidden');
         const aiSleep = await callGeminiVisionJson({
@@ -2088,7 +2118,7 @@
       setStatusBanner('neat-scan-status', 'กำลังอ่านภาพนับก้าวด้วย Gemini...', true);
       try {
         const rawUrl = await readFileAsDataUrl(file);
-        const compressed = await compressDataUrl(rawUrl, 768);
+        const compressed = await compressDataUrl(rawUrl, 640);
         document.getElementById('neat-photo-preview').src = compressed.previewUrl;
         document.getElementById('neat-photo-preview-wrap').classList.remove('hidden');
         const aiNeat = await callGeminiVisionJson({
@@ -2145,7 +2175,7 @@
       setStatusBanner('scale-scan-status', 'กำลังอ่านภาพหน้าจอตาชั่งด้วย Gemini...', true);
       try {
         const rawUrl = await readFileAsDataUrl(file);
-        const compressed = await compressDataUrl(rawUrl, 768);
+        const compressed = await compressDataUrl(rawUrl, 640);
         document.getElementById('scale-photo-preview').src = compressed.previewUrl;
         document.getElementById('scale-photo-preview-wrap').classList.remove('hidden');
         const aiScale = await callGeminiVisionJson({
