@@ -255,7 +255,7 @@
       backdrop-filter: blur(14px);
       border-top: 1px solid var(--border-subtle);
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
+      grid-template-columns: repeat(6, minmax(0, 1fr));
       z-index: 40;
       padding: 6px 4px;
     }
@@ -274,7 +274,15 @@
       font-size: 10px;
       font-weight: 600;
       cursor: pointer;
+      min-width: 0;
       transition: color 0.15s ease, background-color 0.15s ease;
+    }
+
+    .nav-btn span {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
     }
 
     .nav-btn.active {
@@ -288,6 +296,7 @@
       stroke: currentColor;
       fill: none;
       stroke-width: 1.8;
+      flex-shrink: 0;
     }
 
     #toast-msg {
@@ -324,7 +333,6 @@
   <div id="toast-msg" role="status" aria-live="polite"></div>
 
   <div class="app-container">
-    <!-- TOP STICKY HEADER -->
     <header class="sticky top-0 z-30 bg-[#09090b]/95 backdrop-blur-md border-b border-[#242429] px-3.5 py-2.5">
       <div class="flex items-center justify-between gap-2">
         <div class="flex items-center gap-2.5 min-w-0">
