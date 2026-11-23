@@ -1567,7 +1567,7 @@
         throw new Error('ยังไม่ได้กรอก Gemini API Key กรุณาใส่ API Key ในช่องด้านบนสุดก่อนครับ');
       }
 
-      const models = ['gemini-3.8-flash'];
+      const models = ['gemini-3.8-flash', 'gemini-3.8-flash-lite'];
       const parts = [{ text: prompt }];
       if (base64Data && mimeType) {
         parts.push({ inlineData: { mimeType, data: base64Data } });
