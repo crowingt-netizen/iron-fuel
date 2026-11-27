@@ -1940,14 +1940,43 @@
     ];
 
     const SUBFOCUS_MAP = {
-      chest: [{ id: 'full', th: 'เล่นรวมทุกส่วน (Full Compound)', la: 'ຫຼິ້ນລວມທຸກສ່ວນ', en: 'Full Compound' }, { id: 'upper', th: 'อกบน', la: 'ເອິກເທິງ', en: 'Upper Chest' }, { id: 'mid', th: 'อกกลาง', la: 'ເອິກກາງ', en: 'Mid Chest' }, { id: 'lower', th: 'อกล่าง', la: 'ເອິກລຸ່ມ', en: 'Lower Chest' }],
-      back: [{ id: 'full', th: 'เล่นรวมทุกส่วน', la: 'ຫຼິ້ນລວມທຸກສ່ວນ', en: 'Full Compound' }, { id: 'lats', th: 'ปีกหลังกว้าง', la: 'ປີກຫຼັງກວ້າງ', en: 'Lats Width' }],
-      abs: [{ id: 'full', th: 'เล่นรวมทุกส่วน', la: 'ຫຼິ້ນລວມທຸກສ່ວນ', en: 'Full Compound' }, { id: 'sixpack', th: 'ซิกแพค', la: 'ຊິກແພັກ', en: 'Six-Pack' }, { id: 'vline', th: 'วีเชฟท้องล่าง', la: 'ວີເຊັບ', en: 'Lower V-Line' }],
-      shoulders: [{ id: 'full', th: 'เล่นรวมทุกส่วน', la: 'ຫຼິ້ນລວມທຸກສ່ວນ', en: 'Full Compound' }, { id: 'side', th: 'ไหล่ข้าง', la: 'ບ່າໄຫຼ່ຂ້າງ', en: 'Side Delt' }],
-      traps: [{ id: 'full', th: 'เล่นรวมทุกส่วน', la: 'ຫຼິ້ນລວມທຸກສ່ວນ', en: 'Full Compound' }],
-      arms: [{ id: 'full', th: 'หน้าแขน + หลังแขน', la: 'ແຂນໜ້າ + ຫຼັງ', en: 'Full Arms' }],
-      legs: [{ id: 'full', th: 'เล่นรวมทุกส่วน', la: 'ຫຼິ້ນລວມທຸກສ່ວນ', en: 'Full Legs' }],
-      calves: [{ id: 'full', th: 'เล่นรวมทุกส่วน', la: 'ຫຼິ້ນລວມທຸກສ່ວນ', en: 'Full Calves' }]
+      chest: [
+        { id: 'full', th: 'เล่นรวมทุกส่วน (Full Compound)', la: 'ຫຼິ້ນລວມທຸກສ່ວນ', en: 'Full Compound' },
+        { id: 'upper', th: 'อกบน', la: 'ເອິກເທິງ', en: 'Upper Chest' },
+        { id: 'mid', th: 'อกกลาง', la: 'ເອິກກາງ', en: 'Mid Chest' },
+        { id: 'lower', th: 'อกล่าง', la: 'ເອິກລຸ່ມ', en: 'Lower Chest' }
+      ],
+      back: [
+        { id: 'full', th: 'เล่นรวมทุกส่วน', la: 'ຫຼິ້ນລວມທຸກສ່ວນ', en: 'Full Compound' },
+        { id: 'lats', th: 'ปีกหลังกว้าง', la: 'ປີກຫຼັງກວ້າງ', en: 'Lats Width' },
+        { id: 'thickness', th: 'ความหนาหลังกลาง', la: 'ຄວາມໜາຫຼັງກາງ', en: 'Mid-Back Thickness' }
+      ],
+      abs: [
+        { id: 'full', th: 'เล่นรวมทุกส่วน', la: 'ຫຼິ້ນລວມທຸກສ່ວນ', en: 'Full Compound' },
+        { id: 'sixpack', th: 'ซิกแพค', la: 'ຊິກແພັກ', en: 'Six-Pack' },
+        { id: 'vline', th: 'วีเชฟท้องล่าง', la: 'ວີເຊັບ', en: 'Lower V-Line' }
+      ],
+      shoulders: [
+        { id: 'full', th: 'เล่นรวมทุกส่วน', la: 'ຫຼິ້ນລວມທຸກສ່ວນ', en: 'Full Compound' },
+        { id: 'side', th: 'ไหล่ข้าง', la: 'ບ່າໄຫຼ່ຂ້າງ', en: 'Side Delt' },
+        { id: 'front_rear', th: 'ไหล่หน้า & หลังไหล่', la: 'ບ່າໜ້າ & ຫຼັງບ່າ', en: 'Front & Rear Delt' }
+      ],
+      traps: [
+        { id: 'full', th: 'บ่าบน & กลางหลัง', la: 'ບ່າເທິງ & ກາງຫຼັງ', en: 'Upper & Mid Traps' }
+      ],
+      arms: [
+        { id: 'full', th: 'หน้าแขน + หลังแขน', la: 'ແຂນໜ້າ + ຫຼັງ', en: 'Full Arms' },
+        { id: 'biceps', th: 'หน้าแขน (Biceps)', la: 'ແຂນໜ້າ', en: 'Biceps' },
+        { id: 'triceps', th: 'หลังแขน (Triceps)', la: 'ແຂນຫຼັງ', en: 'Triceps' }
+      ],
+      legs: [
+        { id: 'full', th: 'เล่นรวมทุกส่วน', la: 'ຫຼິ້ນລວມທຸກສ່ວນ', en: 'Full Legs' },
+        { id: 'quads', th: 'ต้นขาด้านหน้า (Quads)', la: 'ຕົ້ນຂາດ້ານໜ້າ', en: 'Quads' },
+        { id: 'hamstrings_glutes', th: 'ต้นขาด้านหลัง & ก้น', la: 'ຕົ້ນຂາຫຼັງ & ກົ້ນ', en: 'Hamstrings & Glutes' }
+      ],
+      calves: [
+        { id: 'full', th: 'น่องรวมทุกส่วน', la: 'ນ່ອງລວມທຸກສ່ວນ', en: 'Full Calves' }
+      ]
     };
 
     const EQUIP_FILTER_OPTIONS = [
@@ -1959,22 +1988,100 @@
     ];
 
     const EXERCISE_DB = [
+      // Chest (อก) — ครบทุกอุปกรณ์
       { id: 'ch1', muscle: 'chest', focus: ['full', 'upper'], equip: 'dumbbell', name: 'Incline Dumbbell Press' },
       { id: 'ch2', muscle: 'chest', focus: ['full', 'mid'], equip: 'barbell', name: 'Flat Barbell Bench Press' },
       { id: 'ch3', muscle: 'chest', focus: ['full', 'lower'], equip: 'dumbbell', name: 'Decline Dumbbell Press' },
       { id: 'ch4', muscle: 'chest', focus: ['full', 'lower', 'mid'], equip: 'cable_machine', name: 'Cable Butterfly / Crossover Fly' },
+      { id: 'ch5', muscle: 'chest', focus: ['full', 'mid'], equip: 'dumbbell', name: 'Flat Dumbbell Press' },
+      { id: 'ch6', muscle: 'chest', focus: ['full', 'upper', 'mid'], equip: 'dumbbell', name: 'Dumbbell Pullover' },
+      { id: 'ch7', muscle: 'chest', focus: ['full', 'upper'], equip: 'barbell', name: 'Incline Barbell Bench Press' },
+      { id: 'ch8', muscle: 'chest', focus: ['full', 'lower'], equip: 'barbell', name: 'Decline Barbell Bench Press' },
+      { id: 'ch9', muscle: 'chest', focus: ['full', 'upper', 'mid'], equip: 'cable_machine', name: 'Low-to-High Cable Fly' },
+      { id: 'ch10', muscle: 'chest', focus: ['full', 'mid'], equip: 'cable_machine', name: 'Chest Press Machine' },
+      { id: 'ch11', muscle: 'chest', focus: ['full', 'lower'], equip: 'bodyweight', name: 'Chest Dips / Decline Push-Up' },
+      { id: 'ch12', muscle: 'chest', focus: ['full', 'mid'], equip: 'bodyweight', name: 'Wide Push-Up' },
+
+      // Back (หลัง) — ครบทุกอุปกรณ์
       { id: 'bk1', muscle: 'back', focus: ['full', 'lats'], equip: 'cable_machine', name: 'Wide-Grip Lat Pulldown' },
-      { id: 'bk2', muscle: 'back', focus: ['full'], equip: 'barbell', name: 'Barbell Bent-Over Row' },
-      { id: 'bk3', muscle: 'back', focus: ['full', 'lats'], equip: 'dumbbell', name: 'Single-Arm Dumbbell Row' },
+      { id: 'bk2', muscle: 'back', focus: ['full', 'thickness'], equip: 'barbell', name: 'Barbell Bent-Over Row' },
+      { id: 'bk3', muscle: 'back', focus: ['full', 'lats', 'thickness'], equip: 'dumbbell', name: 'Single-Arm Dumbbell Row' },
+      { id: 'bk4', muscle: 'back', focus: ['full', 'thickness'], equip: 'dumbbell', name: 'Chest-Supported Dumbbell Row' },
+      { id: 'bk5', muscle: 'back', focus: ['full', 'lats'], equip: 'dumbbell', name: 'Dumbbell Straight-Arm Pullover' },
+      { id: 'bk6', muscle: 'back', focus: ['full', 'thickness'], equip: 'barbell', name: 'Pendlay Barbell Row' },
+      { id: 'bk7', muscle: 'back', focus: ['full', 'lats'], equip: 'barbell', name: 'Romanian Deadlift / Rack Pull' },
+      { id: 'bk8', muscle: 'back', focus: ['full', 'thickness'], equip: 'cable_machine', name: 'Seated Cable Row' },
+      { id: 'bk9', muscle: 'back', focus: ['full', 'lats'], equip: 'cable_machine', name: 'Straight-Arm Cable Pulldown' },
+      { id: 'bk10', muscle: 'back', focus: ['full', 'lats'], equip: 'bodyweight', name: 'Pull-Ups / Chin-Ups' },
+      { id: 'bk11', muscle: 'back', focus: ['full', 'thickness'], equip: 'bodyweight', name: 'Superman / Inverted Row' },
+
+      // Abs & V-Line (ท้อง & V) — ครบทุกอุปกรณ์
       { id: 'ab1', muscle: 'abs', focus: ['full', 'sixpack'], equip: 'cable_machine', name: 'Kneeling Cable Crunch' },
       { id: 'ab2', muscle: 'abs', focus: ['full', 'vline'], equip: 'bodyweight', name: 'Hanging Leg Raise' },
+      { id: 'ab3', muscle: 'abs', focus: ['full', 'vline'], equip: 'bodyweight', name: 'Lying Leg Raise / Reverse Crunch' },
+      { id: 'ab4', muscle: 'abs', focus: ['full', 'sixpack'], equip: 'bodyweight', name: 'Weighted Crunch / Plank' },
+      { id: 'ab5', muscle: 'abs', focus: ['full', 'vline'], equip: 'bodyweight', name: 'Bicycle Crunch / Mountain Climber' },
+      { id: 'ab6', muscle: 'abs', focus: ['full', 'vline'], equip: 'dumbbell', name: 'Dumbbell Side Bend' },
+      { id: 'ab7', muscle: 'abs', focus: ['full', 'sixpack'], equip: 'dumbbell', name: 'Weighted Dumbbell Sit-Up' },
+      { id: 'ab8', muscle: 'abs', focus: ['full', 'sixpack'], equip: 'barbell', name: 'Barbell Ab Rollout' },
+      { id: 'ab9', muscle: 'abs', focus: ['full', 'vline'], equip: 'cable_machine', name: 'Cable Woodchopper' },
+
+      // Shoulders (ไหล่) — ครบทุกอุปกรณ์
       { id: 'sh1', muscle: 'shoulders', focus: ['full', 'side'], equip: 'dumbbell', name: 'Dumbbell Lateral Raise' },
-      { id: 'sh2', muscle: 'shoulders', focus: ['full'], equip: 'barbell', name: 'Seated Barbell Overhead Press' },
+      { id: 'sh2', muscle: 'shoulders', focus: ['full', 'front_rear'], equip: 'barbell', name: 'Seated Barbell Overhead Press' },
+      { id: 'sh3', muscle: 'shoulders', focus: ['full', 'front_rear'], equip: 'dumbbell', name: 'Seated Dumbbell Shoulder Press' },
+      { id: 'sh4', muscle: 'shoulders', focus: ['full', 'front_rear'], equip: 'dumbbell', name: 'Dumbbell Front Raise' },
+      { id: 'sh5', muscle: 'shoulders', focus: ['full', 'front_rear'], equip: 'dumbbell', name: 'Bent-Over Dumbbell Rear Delt Fly' },
+      { id: 'sh6', muscle: 'shoulders', focus: ['full', 'side'], equip: 'dumbbell', name: 'Arnold Dumbbell Press' },
+      { id: 'sh7', muscle: 'shoulders', focus: ['full', 'front_rear'], equip: 'barbell', name: 'Standing Barbell Military Press' },
+      { id: 'sh8', muscle: 'shoulders', focus: ['full', 'side'], equip: 'cable_machine', name: 'Single-Arm Cable Lateral Raise' },
+      { id: 'sh9', muscle: 'shoulders', focus: ['full', 'front_rear'], equip: 'cable_machine', name: 'Cable Face Pull' },
+      { id: 'sh10', muscle: 'shoulders', focus: ['full', 'side'], equip: 'bodyweight', name: 'Pike Push-Up' },
+
+      // Traps (บ่า/โหนก) — ครบทุกอุปกรณ์
       { id: 'tr1', muscle: 'traps', focus: ['full'], equip: 'barbell', name: 'Barbell Shrug' },
-      { id: 'ar1', muscle: 'arms', focus: ['full'], equip: 'dumbbell', name: 'Incline Dumbbell Curl' },
-      { id: 'ar3', muscle: 'arms', focus: ['full'], equip: 'cable_machine', name: 'Rope Tricep Pushdown' },
-      { id: 'lg1', muscle: 'legs', focus: ['full'], equip: 'barbell', name: 'Barbell Back Squat' },
-      { id: 'ca1', muscle: 'calves', focus: ['full'], equip: 'dumbbell', name: 'Single-Leg Dumbbell Calf Raise' }
+      { id: 'tr2', muscle: 'traps', focus: ['full'], equip: 'dumbbell', name: 'Dumbbell Shrug' },
+      { id: 'tr3', muscle: 'traps', focus: ['full'], equip: 'dumbbell', name: 'Incline Prone Dumbbell Shrug' },
+      { id: 'tr4', muscle: 'traps', focus: ['full'], equip: 'barbell', name: 'Behind-the-Back Barbell Shrug' },
+      { id: 'tr5', muscle: 'traps', focus: ['full'], equip: 'barbell', name: 'Barbell Upright Row' },
+      { id: 'tr6', muscle: 'traps', focus: ['full'], equip: 'dumbbell', name: 'Dumbbell Upright Row' },
+      { id: 'tr7', muscle: 'traps', focus: ['full'], equip: 'cable_machine', name: 'Cable Shrug' },
+      { id: 'tr8', muscle: 'traps', focus: ['full'], equip: 'cable_machine', name: 'High Cable Face Pull & Shrug' },
+      { id: 'tr9', muscle: 'traps', focus: ['full'], equip: 'bodyweight', name: 'Prone Y-T-W Raise' },
+
+      // Arms (แขน) — ครบทุกอุปกรณ์
+      { id: 'ar1', muscle: 'arms', focus: ['full', 'biceps'], equip: 'dumbbell', name: 'Incline Dumbbell Curl' },
+      { id: 'ar2', muscle: 'arms', focus: ['full', 'biceps'], equip: 'dumbbell', name: 'Dumbbell Hammer Curl' },
+      { id: 'ar3', muscle: 'arms', focus: ['full', 'triceps'], equip: 'cable_machine', name: 'Rope Tricep Pushdown' },
+      { id: 'ar4', muscle: 'arms', focus: ['full', 'biceps'], equip: 'barbell', name: 'Barbell Bicep Curl' },
+      { id: 'ar5', muscle: 'arms', focus: ['full', 'triceps'], equip: 'dumbbell', name: 'Overhead Dumbbell Tricep Extension' },
+      { id: 'ar6', muscle: 'arms', focus: ['full', 'triceps'], equip: 'barbell', name: 'Skull Crusher (EZ / Barbell)' },
+      { id: 'ar7', muscle: 'arms', focus: ['full', 'biceps'], equip: 'cable_machine', name: 'Cable Bicep Curl' },
+      { id: 'ar8', muscle: 'arms', focus: ['full', 'triceps'], equip: 'cable_machine', name: 'Overhead Cable Tricep Extension' },
+      { id: 'ar9', muscle: 'arms', focus: ['full', 'triceps'], equip: 'bodyweight', name: 'Close-Grip Push-Up / Bench Dip' },
+
+      // Legs (ขา) — ครบทุกอุปกรณ์
+      { id: 'lg1', muscle: 'legs', focus: ['full', 'quads'], equip: 'barbell', name: 'Barbell Back Squat' },
+      { id: 'lg2', muscle: 'legs', focus: ['full', 'hamstrings_glutes'], equip: 'barbell', name: 'Barbell Romanian Deadlift' },
+      { id: 'lg3', muscle: 'legs', focus: ['full', 'quads'], equip: 'dumbbell', name: 'Dumbbell Goblet Squat' },
+      { id: 'lg4', muscle: 'legs', focus: ['full', 'quads', 'hamstrings_glutes'], equip: 'dumbbell', name: 'Dumbbell Walking Lunge' },
+      { id: 'lg5', muscle: 'legs', focus: ['full', 'hamstrings_glutes'], equip: 'dumbbell', name: 'Dumbbell Romanian Deadlift' },
+      { id: 'lg6', muscle: 'legs', focus: ['full', 'quads'], equip: 'dumbbell', name: 'Bulgarian Split Squat (Dumbbell)' },
+      { id: 'lg7', muscle: 'legs', focus: ['full', 'quads'], equip: 'cable_machine', name: 'Leg Press Machine' },
+      { id: 'lg8', muscle: 'legs', focus: ['full', 'hamstrings_glutes'], equip: 'cable_machine', name: 'Seated / Lying Leg Curl Machine' },
+      { id: 'lg9', muscle: 'legs', focus: ['full', 'quads'], equip: 'cable_machine', name: 'Leg Extension Machine' },
+      { id: 'lg10', muscle: 'legs', focus: ['full', 'quads'], equip: 'bodyweight', name: 'Jump Squat / Body Squat' },
+      { id: 'lg11', muscle: 'legs', focus: ['full', 'hamstrings_glutes'], equip: 'bodyweight', name: 'Single-Leg Glute Bridge' },
+
+      // Calves (น่อง) — ครบทุกอุปกรณ์
+      { id: 'ca1', muscle: 'calves', focus: ['full'], equip: 'dumbbell', name: 'Single-Leg Dumbbell Calf Raise' },
+      { id: 'ca2', muscle: 'calves', focus: ['full'], equip: 'dumbbell', name: 'Seated Dumbbell Calf Raise' },
+      { id: 'ca3', muscle: 'calves', focus: ['full'], equip: 'barbell', name: 'Standing Barbell Calf Raise' },
+      { id: 'ca4', muscle: 'calves', focus: ['full'], equip: 'barbell', name: 'Seated Barbell Calf Raise' },
+      { id: 'ca5', muscle: 'calves', focus: ['full'], equip: 'cable_machine', name: 'Standing Calf Raise Machine' },
+      { id: 'ca6', muscle: 'calves', focus: ['full'], equip: 'cable_machine', name: 'Leg Press Calf Raise' },
+      { id: 'ca7', muscle: 'calves', focus: ['full'], equip: 'bodyweight', name: 'Standing Bodyweight Calf Raise' },
+      { id: 'ca8', muscle: 'calves', focus: ['full'], equip: 'bodyweight', name: 'Single-Leg Step Calf Raise' }
     ];
 
     function renderCoachSelectors() {
@@ -1986,7 +2093,11 @@
       const subList = SUBFOCUS_MAP[appState.workout.muscle] || SUBFOCUS_MAP.chest;
       subSelect.innerHTML = subList.map(s => `<option value="${s.id}">${s[appState.lang] || s.th}</option>`).join('');
       subSelect.value = subList.some(s => s.id === appState.workout.subFocus) ? appState.workout.subFocus : 'full';
-      subSelect.onchange = function () { appState.workout.subFocus = this.value; saveState(); };
+      subSelect.onchange = function () {
+        appState.workout.subFocus = this.value;
+        saveState();
+        generateWorkoutPlan(true);
+      };
 
       const eqSelect = document.getElementById('equip-filter-select');
       eqSelect.innerHTML = EQUIP_FILTER_OPTIONS.map(o => `<option value="${o.id}">${o[appState.lang] || o.th}</option>`).join('');
@@ -2023,11 +2134,27 @@
 
     function generateWorkoutPlan(isReroll) {
       const muscle = appState.workout.muscle || 'chest';
+      const subFocus = appState.workout.subFocus || 'full';
       const filter = appState.workout.equipFilter || 'all';
-      let pool = EXERCISE_DB.filter(e => e.muscle === muscle && equipMatches(e.equip, filter));
-      if (pool.length === 0) pool = EXERCISE_DB.filter(e => e.muscle === muscle);
 
-      const chosen = pool.sort(() => Math.random() - 0.5).slice(0, 3);
+      // ลำดับชั้นตัวกรอง:
+      // 1) ตรงกล้ามเนื้อ + ตรงจุดเน้นย่อย + ตรงอุปกรณ์
+      let pool = EXERCISE_DB.filter(e => e.muscle === muscle && e.focus.includes(subFocus) && equipMatches(e.equip, filter));
+      // 2) ถ้าจุดเน้นย่อยมีท่าไม่ถึง 4 ท่า ให้เติมท่าในกล้ามเนื้อเดียวกันที่ตรงอุปกรณ์
+      if (pool.length < 4) {
+        const extraSameEquip = EXERCISE_DB.filter(e => e.muscle === muscle && equipMatches(e.equip, filter) && !pool.some(p => p.id === e.id));
+        pool = pool.concat(extraSameEquip);
+      }
+      // 3) ถ้ากลุ่มอุปกรณ์นั้นมีท่าจำกัดจริงๆ ให้เติมท่าในกล้ามเนื้อเดียวกันให้ครบ 4-5 ท่า
+      if (pool.length < 4) {
+        const extraAnyEquip = EXERCISE_DB.filter(e => e.muscle === muscle && !pool.some(p => p.id === e.id));
+        pool = pool.concat(extraAnyEquip);
+      }
+
+      const shuffled = [...pool].sort(() => Math.random() - 0.5);
+      const targetCount = shuffled.length >= 5 ? (Math.random() < 0.55 ? 5 : 4) : Math.min(4, shuffled.length);
+      const chosen = shuffled.slice(0, targetCount);
+
       const defSets = appState.workout.style === 'bulk' ? 4 : 3;
       const defReps = appState.workout.style === 'bulk' ? 10 : 14;
 
@@ -2035,17 +2162,20 @@
         id: ex.id,
         name: ex.name,
         equipType: ex.equip,
-        weightKg: ex.equip === 'bodyweight' ? 0 : 20,
+        weightKg: ex.equip === 'bodyweight' ? 0 : (ex.equip === 'barbell' ? 30 : 15),
         sets: defSets,
         reps: defReps,
         done: false
       }));
 
-      document.getElementById('adaptation-banner').textContent = 'กดปุ่ม "▶ วิธีเล่น" ข้างชื่อท่าเพื่อดูสอนฟอร์มที่ถูกต้อง หรือกด Done เมื่อเล่นเสร็จ';
+      const muscleObj = MUSCLES.find(m => m.id === muscle);
+      const muscleLabel = muscleObj ? (muscleObj[appState.lang] || muscleObj.th) : muscle;
+      document.getElementById('adaptation-banner').textContent =
+        `จัดตาราง ${muscleLabel} ${chosen.length} ท่า (มาตรฐานทั่วไป 3–5 ท่า/เซสชัน) • กด "▶ วิธีเล่น" เพื่อดูฟอร์ม หรือกด "AI สุ่มท่าใหม่" เพื่อสุ่มชุดใหม่`;
       saveState();
       renderExercises();
       recalcWorkoutBurn();
-      if (isReroll) notify('AI Reroll');
+      if (isReroll) notify(`สุ่มท่าใหม่ ${chosen.length} ท่า`);
     }
 
     function toggleLiftDone(id) {
